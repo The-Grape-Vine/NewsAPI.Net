@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsAPI.Net", "NewsAPI.Net\NewsAPI.Net.csproj", "{EAD6AD89-5094-46E2-AA15-5E5644AA0A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsAPI.Net.Tests", "NewsAPI.Net.Tests\NewsAPI.Net.Tests.csproj", "{D973CA85-6E44-498A-955F-E5F64B4B24DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAD6AD89-5094-46E2-AA15-5E5644AA0A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD6AD89-5094-46E2-AA15-5E5644AA0A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD6AD89-5094-46E2-AA15-5E5644AA0A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD6AD89-5094-46E2-AA15-5E5644AA0A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D973CA85-6E44-498A-955F-E5F64B4B24DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D973CA85-6E44-498A-955F-E5F64B4B24DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D973CA85-6E44-498A-955F-E5F64B4B24DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D973CA85-6E44-498A-955F-E5F64B4B24DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
