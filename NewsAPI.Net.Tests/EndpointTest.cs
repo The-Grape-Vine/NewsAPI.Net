@@ -7,11 +7,12 @@ namespace NewsAPI.Net.Tests
     [TestClass]
     public class EndpointTest
     {
+        private static NewsApi api = new NewsApi("");
+
         
         [TestMethod]
         public async void TestSourcesEndpoint()
         {
-            var api = new NewsApi("550d4e974dcc4cf1b4675a5ce91b202e");
             using (var httpTest = new HttpTest())
             {
                 var result = await api.GetSourcesAsync();
@@ -19,6 +20,21 @@ namespace NewsAPI.Net.Tests
                 var sources = result.Sources;
                 
                 Assert.AreEqual("abc-news", sources[0].ID);
+                
+               
+            }
+        }
+
+        [TestMethod]
+        public async void TestEverythingEndpoint()
+        {
+            using (var httpTest = new HttpTest())
+            {
+                var result = await api.GetEverythingAsync("bitcoin", null, null);
+
+                var articles = result.Articles;
+                
+                Assert.AreEqual("ok", result.Status);
             }
         }
     }

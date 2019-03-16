@@ -40,7 +40,18 @@ namespace NewsAPI.Net
                 .GetJsonAsync<SourceEntity>();
             return result;
         }
-        
+
+        public async Task<NewsEntity> GetEverythingAsync(string q, string sources, string domains)
+        {
+            var result = await "https://newsapi.org/v2/everything"
+                .SetQueryParams("apiKey", apiKey)
+                .SetQueryParams("q", q)
+                .SetQueryParams("sources", sources)
+                .SetQueryParams("domains", domains)
+                .ConfigureRequest(settings => { settings.JsonSerializer = GetSerializer(); })
+                .GetJsonAsync<NewsEntity>();
+            return result;
+        }
         
     
         private ISerializer GetSerializer()
