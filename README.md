@@ -1,17 +1,20 @@
 # NewsAPI.Net
 
-NewsAPI.Net is a C# library that wraps around https://newsapi.org. 
+NewsAPI.Net is an alternative .NET api wrapper for https://newsapi.org. 
 
 ## How to Use
 
-First get an API key from [here](https://newsapi.org/account)
+First get an API key from https://newsapi.org/
 
 ```cs
-var api = new NewsAPI("api-key");
+var api = new NewsAPIClient("api-key");
 
 var sources = await api.GetSourcesAsync();
 
-var everything = await api.GetEverythingAsync("query?", "sources", "domains?");
+var everything = await api.GetEverythingAsync("bitcoin", "sources", "domains");
 
-var topHeadlines = await api.GetTopHeadlinesAsync("query?", "sources", "domains?");
+var topHeadlines = await api.GetTopHeadlinesAsync("dotnet", "sources", "domains");
 ```
+
+# Documentation
+ - under construction
