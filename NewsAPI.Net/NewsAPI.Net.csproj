@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <TargetFrameworks>netcoreapp2.1;netstandard2.0;net472</TargetFrameworks>
         <Company />
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
         <PackageLicenseUrl>https://github.com/CircuitCodes/NewsAPI.Net/blob/master/LICENSE</PackageLicenseUrl>
         <Authors>CircuitRCAY</Authors>
         <Copyright>Copyright 2019-present CircuitRCAY</Copyright>
@@ -11,7 +11,7 @@
         <PackageProjectUrl>https://circuitrcay.com</PackageProjectUrl>
         <PackageTags>news</PackageTags>
         <Description>A C# library wrapping https://newsapi.org</Description>
-        <PackageReleaseNotes>Released 1.0.0, covered all 3 endpoints.</PackageReleaseNotes>
+        <PackageReleaseNotes>Released 1.1.0, supports multiple frameworks</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

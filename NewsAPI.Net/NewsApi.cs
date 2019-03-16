@@ -35,7 +35,10 @@ namespace NewsAPI.Net
         public async Task<SourceEntity> GetSourcesAsync()
         {
             var result = await "https://newsapi.org/v2/sources"
-                .SetQueryParams("apiKey", apiKey)
+                .SetQueryParams(new
+                    {
+                        apiKey = apiKey
+                    })
                 .ConfigureRequest(settings => { settings.JsonSerializer = GetSerializer(); })
                 .GetJsonAsync<SourceEntity>();
             return result;
