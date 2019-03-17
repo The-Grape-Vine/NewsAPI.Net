@@ -1,13 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
-        <Version>2.1.0</Version>
+        <TargetFrameworks>netcoreapp2.1;netstandard2.0;net472</TargetFrameworks>
+        <Company />
+        <Version>2.0.0</Version>
+        <PackageLicenseUrl>https://github.com/The-Grape-Vine/NewsAPI.Net/blob/master/LICENSE</PackageLicenseUrl>
+        <Authors>CircuitRCAY</Authors>
+        <Copyright>Copyright 2019-present The Grape Vine</Copyright>
+        <RepositoryUrl>https://github.com/The-Grape-Vine/NewsAPI.Net/</RepositoryUrl>
+        <PackageProjectUrl>https://circuitrcay.com</PackageProjectUrl>
+        <PackageTags>news</PackageTags>
+        <Description>A C# library wrapping https://newsapi.org</Description>
+        <PackageReleaseNotes>Released 2.0.0, a major refactor in the core implementation.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Flurl.Http" Version="2.4.1" />
       <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Web.HttpUtility, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+        <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\ref\netcoreapp2.1\System.Web.HttpUtility.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>
