@@ -2,10 +2,22 @@
 
 NewsAPI.Net is an alternative .NET api wrapper for https://newsapi.org. 
 
+## Support
+The official way to get support for this library is through this Discord server:
+
+
+[![The Vineyard](https://discordapp.com/api/guilds/496913442830286848/embed.png?style=banner2)](https://discord.gg/TjfGxuS)
+
+## Install
+This package is available via NuGet:
+
+`Install-Package NewsAPI.Net` on the Package Manager console.
+
 ## How to Use
 
-First get an API key from https://newsapi.org/
+First get an API key from https://newsapi.org/account
 
+A set of examples would be:
 ```cs
 var api = new NewsAPIClient("api-key");
 
@@ -17,4 +29,4 @@ var topHeadlines = await api.GetTopHeadlinesAsync("dotnet", "sources", "domains"
 ```
 
 # Documentation
- - under construction
+ - under construction, coming soon.
