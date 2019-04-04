@@ -28,16 +28,13 @@ var everything = await api.GetEverythingAsync("bitcoin", "sources", "domains", L
 var topHeadlines = await api.GetTopHeadlinesAsync("dotnet", "sources", "domains", Language.ENGLISH);
 ```
 
-<<<<<<< HEAD
 ## Documentation
- - under construction
+ - under construction, source code is documented.
  
 
 ## License
 We abide by the MIT License, provided [here](https://github.com/The-Grape-Vine/NewsAPI.Net/blob/master/LICENSE).
 
  
-=======
 # Documentation
  - under construction, coming soon.
->>>>>>> 81bed746f5068771a6651ebfb9d7ca2491348367
