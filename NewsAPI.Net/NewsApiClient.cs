@@ -62,23 +62,22 @@ namespace NewsAPI.Net
         }
 
         /// <summary>
-        /// Returns a <see cref="NewsModel"/> containing a list of articles relating to <paramref name="q"/>.
+        /// Returns a <see cref="NewsModel"/> containing a list of articles relating to <paramref name="query"/>.
         /// </summary>
         /// <param name="query">Keywords or phrases to search for.</param>
         /// <param name="sources">A comma-separated string of identifiers (maximum 20) for the news sources or blogs you want headlines from.</param>
+        /// <param name="lang">The language you want to get headlines for. Default being all languages returned.</param>
         /// <param name="domains"> A comma-separated string of domains (eg bbc.co.uk, techcrunch.com, engadget.com) to restrict the search to. </param>
-        /// <returns></returns>
-        public async Task<NewsModel> GetEverythingAsync(string query = null, string sources = null, string domains = null)
+        /// <returns>Task{TResult}</returns>
+        public async Task<NewsModel> GetEverythingAsync(string query = null, string sources = null, string domains = null, string lang = null)
         {
-            if (q == null)
-            {
-                throw new ArgumentNullException(nameof(query));
-            }
+           
 
             Uri uri = new Uri(_baseUrl + "everything")
                 .AddQuery("apiKey", _key)
                 .AddQuery("q", query)
                 .AddQuery("sources", sources)
+                .AddQuery("language", lang.ToString())
                 .AddQuery("domains", domains);
             HttpResponseMessage response = await _client.GetAsync(uri);
             response.EnsureSuccessStatusCode();
@@ -88,23 +87,22 @@ namespace NewsAPI.Net
         }
 
         /// <summary>
-        /// Returns a <see cref="NewsModel"/> containing a list of top articles relating to <paramref name="q"/>.
+        /// Returns a <see cref="NewsModel"/> containing a list of top articles relating to <paramref name="query"/>.
         /// </summary>
         /// <param name="query">Keywords or phrases to search for.</param>
         /// <param name="sources">A comma-separated string of identifiers (maximum 20) for the news sources or blogs you want headlines from.</param>
+        /// <param name="lang">The language you want to return top</param>
         /// <param name="domains"> A comma-separated string of domains (eg bbc.co.uk, techcrunch.com, engadget.com) to restrict the search to. </param>
-        /// <returns></returns>
-        public async Task<NewsModel> GetTopHeadlinesAsync(string query, string sources = null, string domains = null)
+        /// <returns>Task{TResult}</returns>
+        public async Task<NewsModel> GetTopHeadlinesAsync(string query = null, string sources = null, string domains = null, string lang = null)
         {
-            if (q == null)
-            {
-                throw new ArgumentNullException(nameof(query));
-            }
+            
 
             Uri uri = new Uri(_baseUrl + "top-headlines")
                 .AddQuery("apiKey", _key)
                 .AddQuery("q", query)
                 .AddQuery("sources", sources)
+                .AddQuery("language", lang.ToString())
                 .AddQuery("domains", domains);
             HttpResponseMessage response = await _client.GetAsync(uri);
             response.EnsureSuccessStatusCode();

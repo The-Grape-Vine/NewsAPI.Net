@@ -11,10 +11,16 @@ var api = new NewsAPIClient("api-key");
 
 var sources = await api.GetSourcesAsync();
 
-var everything = await api.GetEverythingAsync("bitcoin", "sources", "domains");
+var everything = await api.GetEverythingAsync("bitcoin", "sources", "domains", Language.ENGLISH);
 
-var topHeadlines = await api.GetTopHeadlinesAsync("dotnet", "sources", "domains");
+var topHeadlines = await api.GetTopHeadlinesAsync("dotnet", "sources", "domains", Language.ENGLISH);
 ```
 
-# Documentation
+## Documentation
  - under construction
+ 
+
+## License
+We abide by the MIT License, provided [here](https://github.com/The-Grape-Vine/NewsAPI.Net/blob/master/LICENSE).
+
+ 

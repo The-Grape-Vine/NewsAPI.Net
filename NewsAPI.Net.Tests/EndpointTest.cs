@@ -1,3 +1,4 @@
+using NewsAPI.Net.Models;
 using Newtonsoft.Json;
 using Xunit;
 using Xunit.Abstractions;
@@ -14,26 +15,26 @@ namespace NewsAPI.Net.Tests
         }
 
         [Fact]
-        public void Test1()
+        public void SourcesTest()
         {
-            NewsClient client = new NewsClient("550d4e974dcc4cf1b4675a5ce91b202e");
+            NewsClient client = new NewsClient("bb554838724b452fb14adf8661be7646");
             Models.NewsSourcesModel s = client.GetSourcesAsync().GetAwaiter().GetResult();
             output.WriteLine(JsonConvert.SerializeObject(s));
         }
 
         [Fact]
-        public void Test2()
+        public void EverythingTest()
         {
-            NewsClient client = new NewsClient("550d4e974dcc4cf1b4675a5ce91b202e");
-            Models.NewsModel s = client.GetEverythingAsync("bitcoin").GetAwaiter().GetResult();
+            NewsClient client = new NewsClient("bb554838724b452fb14adf8661be7646");
+            Models.NewsModel s = client.GetEverythingAsync("bitcoin", lang: Language.ENGLISH).GetAwaiter().GetResult();
             output.WriteLine(JsonConvert.SerializeObject(s));
         }
 
         [Fact]
-        public void Test3()
+        public void TopHeadlinesTest()
         {
-            NewsClient client = new NewsClient("550d4e974dcc4cf1b4675a5ce91b202e");
-            Models.NewsModel s = client.GetTopHeadlinesAsync("bitcoin").GetAwaiter().GetResult();
+            NewsClient client = new NewsClient("bb554838724b452fb14adf8661be7646");
+            Models.NewsModel s = client.GetTopHeadlinesAsync("abc-news", lang:Language.ENGLISH).GetAwaiter().GetResult();
             output.WriteLine(JsonConvert.SerializeObject(s));
         }
     }
