@@ -68,9 +68,9 @@ namespace NewsAPI.Net
         /// <param name="query">Keywords or phrases to search for.</param>
         /// <param name="sources">A comma-separated string of identifiers (maximum 20) for the news sources or blogs you want headlines from.</param>
         /// <param name="lang">The language you want to get headlines for. Default being all languages returned.</param>
-        /// <param name="domains"> A List{String} of domains (eg bbc.co.uk, techcrunch.com, engadget.com) to restrict the search to. </param>
+        /// <param name="domains"> An array of domains (eg bbc.co.uk, techcrunch.com, engadget.com) to restrict the search to. </param>
         /// <returns>Task{TResult}</returns>
-        public async Task<NewsModel> GetEverythingAsync(string query = null, string sources = null, List<string> domains = null, string lang = null)
+        public async Task<NewsModel> GetEverythingAsync(string query = null, string sources = null, string[] domains = null, string lang = null)
         {
            
 
@@ -93,9 +93,9 @@ namespace NewsAPI.Net
         /// <param name="query">Keywords or phrases to search for.</param>
         /// <param name="sources">A comma-separated string of identifiers (maximum 20) for the news sources or blogs you want headlines from.</param>
         /// <param name="lang">The language you want to return top headlines for. Default being all languages returned.</param> 
-        /// <param name="domains"> A List{String} of domains (eg bbc.co.uk, techcrunch.com, engadget.com) to restrict the search to. </param>
+        /// <param name="domains"> An array of domains (eg bbc.co.uk, techcrunch.com, engadget.com) to restrict the search to. </param>
         /// <returns>Task{TResult}</returns>
-        public async Task<NewsModel> GetTopHeadlinesAsync(string query = null, string sources = null, List<string> domains = null, string lang = null)
+        public async Task<NewsModel> GetTopHeadlinesAsync(string query = null, string sources = null, string[] domains = null, string lang = null)
         {
             
 
