@@ -9,8 +9,9 @@ namespace NewsAPI.Net.Models
         public string ImageUrl { get; set; }
         public string PublishedAt { get; set; }
         public string Content { get; set; }
+        public InternalSource Source { get; set; }
     }
-
+        
     public class InternalSource
     {
         public string Id { get; set; }
