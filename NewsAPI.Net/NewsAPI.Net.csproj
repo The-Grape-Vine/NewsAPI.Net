@@ -1,19 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <Version>2.2.0</Version>
+        <Version>2.2.1</Version>
         <RepositoryUrl>https://github.com/The-Grape-Vine/NewsAPI.Net/</RepositoryUrl>
         <Authors>circuitrcay</Authors>
         <PackageLicenseUrl>https://github.com/The-Grape-Vine/NewsAPI.Net/blob/master/LICENSE</PackageLicenseUrl>
         <Description>A C# library wrapping https://newsapi.org</Description>
-        <PackageReleaseNotes>Released 2.2.0, added support for specific languages.</PackageReleaseNotes>
+        <PackageReleaseNotes>Released 2.2.1, added model data.</PackageReleaseNotes>
         <Copyright>2019-present The Grape Vine.</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     </ItemGroup>
-    
-    
 </Project>
